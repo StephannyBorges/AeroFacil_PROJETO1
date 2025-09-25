@@ -1,0 +1,402 @@
+/* --- GERAL & VARIÁVEIS --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #00A896; /* Verde-azulado do logo */
+    --secondary-color: #02C39A;
+    --dark-blue: #2c3e50;
+    --light-gray: #f4f4f4;
+    --text-color: #34495e;
+    --white: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* --- HEADER --- */
+.main-header {
+    background: var(--white);
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--dark-blue);
+}
+
+.main-nav a {
+    margin-left: 20px;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.nav-link-offer {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.nav-link-offer:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.nav-link-login {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.nav-link-login:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* --- HERO SECTION (HOMEPAGE) --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1610413281048-26553b780f3e?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-form {
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.search-form input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    min-width: 180px;
+}
+
+.search-form .btn-search {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form .btn-search:hover {
+    background-color: var(--primary-color);
+}
+
+/* --- SEÇÃO "COMO FUNCIONA" --- */
+.how-it-works {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.step {
+    flex: 1;
+}
+
+.step i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* --- PÁGINA DE RESULTADOS --- */
+.page-title {
+    padding: 40px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.results-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.filters {
+    flex-basis: 25%;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    align-self: flex-start;
+}
+
+.filters h3 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 10px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.filter-group select, .filter-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+}
+
+.trip-list {
+    flex-basis: 75%;
+}
+
+.trip-card {
+    display: flex;
+    gap: 20px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.trip-card:hover {
+    transform: translateY(-5px);
+}
+
+.trip-card-owner {
+    flex-basis: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+    padding: 20px;
+    text-align: center;
+}
+.trip-card-owner img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.trip-card-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.trip-card-info h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.trip-card-details {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    color: #7f8c8d;
+}
+
+.trip-card-action {
+    flex-basis: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-left: 1px solid #eee;
+}
+
+.btn-details {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+.btn-details:hover {
+    background-color: var(--dark-blue);
+}
+
+/* --- PÁGINA DE DETALHES --- */
+.details-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.flight-info {
+    flex-basis: 60%;
+}
+.flight-info img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+.flight-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.owner-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--light-gray);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+}
+.owner-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+.booking-info {
+    flex-basis: 40%;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+}
+
+.negotiation-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.negotiation-card h3 {
+    margin-bottom: 15px;
+}
+
+.seat-map {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+}
+
+.seat {
+    height: 40px;
+    background-color: gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+
+.seat.available {
+    background-color: #2ecc71; /* Verde */
+    cursor: pointer;
+}
+.seat.available:hover {
+    background-color: #27ae60;
+}
+.seat.occupied {
+    background-color: #bdc3c7; /* Cinza */
+    cursor: not-allowed;
+}
+
+.btn-negotiate {
+    display: block;
+    width: 100%;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-negotiate:hover {
+    background-color: var(--primary-color);
+}
