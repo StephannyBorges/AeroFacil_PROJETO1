@@ -1,90 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados da Busca - Aero Fácil</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'flights/style.css' %}">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="logo">AERO FÁCIL</a>
-            <nav class="main-nav">
-                <a href="#" class="nav-link-offer">Oferecer Carona Aérea</a>
-                <a href="#" class="nav-link-login">Login / Cadastre-se</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div class="page-title">
-            <div class="container">
-                <h2>Caronas encontradas para: Natal > São Paulo</h2>
-            </div>
-        </div>
-
-        <div class="container results-layout">
-            <aside class="filters">
-                <h3>Filtrar Resultados</h3>
-                <div class="filter-group">
-                    <label for="horario">Faixa de Horário</label>
-                    <select id="horario">
-                        <option>Qualquer</option>
-                        <option>Manhã (06:00 - 12:00)</option>
-                        <option>Tarde (12:00 - 18:00)</option>
-                        <option>Noite (18:00 - 00:00)</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="vagas">Vagas Disponíveis</label>
-                    <input type="number" id="vagas" min="1" placeholder="Ex: 2">
-                </div>
-            </aside>
-
-            <section class="trip-list">
-                <article class="trip-card">
-                    <div class="trip-card-owner">
-                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop" alt="Foto do Proprietário">
-                        <strong>Carlos S.</strong>
-                    </div>
-                    <div class="trip-card-info">
-                        <h3>Natal (NAT) > São Paulo (GRU)</h3>
-                        <div class="trip-card-details">
-                            <span>📅 28 de Setembro de 2025</span>
-                            <span>⏰ 09:00</span>
-                        </div>
-                        <p><strong>Aeronave:</strong> Phenom 300</p>
-                        <p><strong>Assentos Livres:</strong> 8 de 12</p>
-                    </div>
-                    <div class="trip-card-action">
-                        <a href="detalhes.html" class="btn-details">Ver Detalhes e Negociar</a>
-                    </div>
-                </article>
-
-                <article class="trip-card">
-                    <div class="trip-card-owner">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" alt="Foto da Proprietária">
-                        <strong>Ana P.</strong>
-                    </div>
-                    <div class="trip-card-info">
-                         <h3>Natal (NAT) > São Paulo (GRU)</h3>
-                        <div class="trip-card-details">
-                            <span>📅 28 de Setembro de 2025</span>
-                            <span>⏰ 14:30</span>
-                        </div>
-                        <p><strong>Aeronave:</strong> Citation CJ4</p>
-                        <p><strong>Assentos Livres:</strong> 4 de 10</p>
-                    </div>
-                    <div class="trip-card-action">
-                        <a href="detalhes.html" class="btn-details">Ver Detalhes e Negociar</a>
-                    </div>
-                </article>
-
-            </section>
-        </div>
-    </main>
-
-</body>
-</html>
+<header class="main-header">
+    <div class="container">
+        <a href="{% url 'home' %}" class="logo">AERO FÁCIL</a>
+        <nav class="main-nav">
+            <a href="#" class="nav-
